@@ -30,7 +30,7 @@ def poststatus():
   rows = cursor.fetchall()
   for row in rows:
         status = statusCheck(row[2])
-        params = urllib.urlencode({'field1': row[1], 'field2': status,'key':'GMZPZSBWFIQLZHYW'})
+        params = urllib.urlencode({'field1': status,'key': row[7]})
         headers = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
         conn = httplib.HTTPConnection("api.thingspeak.com:80")
 
