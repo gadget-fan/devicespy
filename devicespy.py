@@ -42,7 +42,7 @@ def poststatus():
                 print response.status, response.reason
                 data = response.read()
                 conn.close()
-                time.sleep(16)
+#                time.sleep(16)
         except:
                 print "connection failed"
 
